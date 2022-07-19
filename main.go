@@ -36,7 +36,8 @@ func main() {
 				"Playing FPS Game",
 			},
 		}
-
+		c.Response().Header().Set("X-Powered-By", "Echo Labstack + AWS Lightsail")
+		c.Response().Header().Set("Read-MY-CV", "https://read.cv/khafidprayoga")
 		return c.JSON(http.StatusOK, profile)
 	})
 	server.Start(":3000")
