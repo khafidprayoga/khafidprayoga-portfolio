@@ -1,2 +1,2 @@
 # About
-Simple dockerized app with express running on port 3000
+Simple dockerized app with echo labstack running on port 3000
