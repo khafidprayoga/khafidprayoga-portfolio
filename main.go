@@ -1,19 +1,13 @@
 package main
 
 import (
-	"log"
 	"net/http"
 	"os"
 
-	"github.com/joho/godotenv"
 	"github.com/labstack/echo/v4"
 )
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Can't read dotenv file")
-	}
 	server := echo.New()
 	server.GET("/", func(c echo.Context) error {
 		c.Redirect(http.StatusPermanentRedirect, "https://github.com/khafidprayoga")
