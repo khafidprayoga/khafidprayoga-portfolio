@@ -9,7 +9,7 @@ import (
 
 func main() {
 	server := echo.New()
-	server.Static("/", "public")
+	server.Static("/", "/public")
 
 	server.Any("/profile", func(c echo.Context) error {
 		data := map[string]interface{}{
