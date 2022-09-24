@@ -9,10 +9,7 @@ import (
 
 func main() {
 	server := echo.New()
-	server.GET("/", func(c echo.Context) error {
-		c.Redirect(http.StatusPermanentRedirect, "https://github.com/khafidprayoga")
-		return nil
-	})
+	server.Static("/", "public")
 
 	server.Any("/profile", func(c echo.Context) error {
 		data := map[string]interface{}{
